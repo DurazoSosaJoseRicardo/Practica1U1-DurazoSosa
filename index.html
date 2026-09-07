@@ -75,14 +75,58 @@
   <!-- cierre de main -->
   </main>
 
+  
+
   <!-- footer con id="contacto": acá aterriza el tercer enlace; va una sola vez, al final -->
   <footer id="contacto">
     <h2>Contacto</h2>
-    <!-- reemplazá por tu correo real -->
-    <p>[tu-correo@ejemplo.com]</p>
-    <!-- &copy; genera el símbolo © -->
-    <p>© 2026 [Tu Nombre]</p>
-  <!-- cierre del footer -->
+    <h2>Contacto</h2>
+    <!-- form sin action ni method: todavía no hay servidor que reciba estos datos -->
+    <form>
+      <!-- div: agrupa la etiqueta y el campo de "Nombre" -->
+      <div>
+        <!-- for="nombre" debe ser IGUAL al id del input de abajo: así se vinculan -->
+        <label for="nombre">Nombre</label>
+        <!-- type="text": campo de texto simple -->
+        <input
+          type="text"
+          id="nombre"
+          name="nombre"
+          required
+          minlength="2"
+          placeholder="Tu nombre">
+      </div>
+
+      <!-- div: agrupa la etiqueta y el campo de "Correo" -->
+      <div>
+        <label for="correo">Correo</label>
+        <!-- type="email": el navegador exige el formato usuario@dominio antes de dejar enviar -->
+        <input
+          type="email"
+          id="correo"
+          name="correo"
+          required
+          placeholder="tu@correo.com">
+      </div>
+
+      <!-- div: agrupa la etiqueta y el campo de "Mensaje" -->
+      <div>
+        <label for="mensaje">Mensaje</label>
+        <!-- textarea: campo de texto de varias líneas, sin atributo "type" -->
+        <textarea
+          id="mensaje"
+          name="mensaje"
+          required
+          minlength="10"
+          maxlength="500"
+          rows="4"></textarea>
+      <!-- cierre del div de "Mensaje" -->
+      </div>
+
+      <!-- button type="submit": dispara el envío y activa la validación de todos los campos de arriba -->
+      <butto ntype="submit">Enviar</button>
+    <!-- cierre del form -->
+    </form>
   </footer>
 
 <!-- cierre de body -->
